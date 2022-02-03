@@ -6,13 +6,12 @@ const speedSlider = document.querySelector(".speed-slider");
 const [playBtn, pauseBtn, stopBtn] = [...document.querySelectorAll(".button")];
 
 let intervalTimer, curNote = 0;
-let speed = speedSlider.value;
 
 playBtn.addEventListener('click', () => {
   playBtn.disabled = true;
 
   playOneFile();
-  intervalTimer = setInterval(playMusic, speedSlider.value * 100);
+  intervalTimer = setInterval(playMusic, 1000 - ((speedSlider.value - 1) * 100));
 });
 
 pauseBtn.addEventListener('click', () => {
@@ -62,7 +61,7 @@ function changeSpeed() {
   if (playBtn.disabled) {
     setTimeout(() => {
       playOneFile();
-      intervalTimer = setInterval(playMusic, speedSlider.value * 100);
-    }, speedSlider.value * 50);
+      intervalTimer = setInterval(playMusic, 1000 - ((speedSlider.value - 1) * 100));
+    }, (1000 - ((speedSlider.value - 1) * 100)) / 2);
   }
 }
