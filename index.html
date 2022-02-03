@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical Notes</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="player">
+      <div class="buttons">
+        <button class="button button_play">
+          <img src="img/play.png" width="35" height="35">
+        </button>
+        <button class="button button_pause">
+          <img src="img/pause.png" width="35" height="35">
+        </button>
+        <button class="button button_stop">
+          <img src="img/stop.png" width="35" height="35">
+        </button>
+      </div>
+      <input class="speed-slider" type="range" name="volume" min="1" max="10" value="1">
+      <div class="speed-values">
+        <span class="speed-values__value">1</span>
+        <span class="speed-values__value">2</span>
+        <span class="speed-values__value">3</span>
+        <span class="speed-values__value">4</span>
+        <span class="speed-values__value">5</span>
+        <span class="speed-values__value">6</span>
+        <span class="speed-values__value">7</span>
+        <span class="speed-values__value">8</span>
+        <span class="speed-values__value">9</span>
+        <span class="speed-values__value speed-values__value_last">1</span>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
